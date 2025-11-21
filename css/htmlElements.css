@@ -1,0 +1,136 @@
+/* --- 
+
+Filename: htmlElements.css
+
+Purpose: Styles that target the overall document and standard HTML elements
+
+--- */
+
+:after,
+:before {
+	box-sizing: border-box !important;
+}
+
+html {
+	background: #333;
+	font-family: var(--msu-font);
+	font-size: 16px;
+	letter-spacing: var(--base-letterspacing);
+}
+
+body {
+	background: #fff;
+	margin: 0;
+	overflow-x:hidden;
+}
+
+h1,
+h2 {
+	color: var(--heading-color);
+	font-weight: 700;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	color: var(--heading-color);
+	font-weight: 500;
+	margin: 1rem 0;
+	text-transform: none;
+}
+
+h1 {
+	line-height: var(--heading-1-line-height);
+}
+
+h2 {
+	line-height: var(--heading-2-line-heigh);
+}
+
+h3 {
+	line-height: var(--heading-3-line-height);
+}
+
+h4 {
+	line-height: var(--heading-4-line-height);
+}
+
+h5 {
+	line-height: var(--heading-5-line-height);
+}
+
+h6 {
+	line-height: var(--heading-6-line-height);
+}
+
+
+header {
+	padding-top: 1rem;
+	position: relative;
+	z-index: 10;
+}
+    & a:focus {
+        outline: 2px dashed #fff;
+		outline-offset: 2px;
+    }
+
+hr {
+	margin: 0;
+	border: 1px solid #ddd;
+}
+
+.header-video {
+	background: rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 20;
+}
+
+main {
+	grid-column: 1/-1;
+}
+
+footer {
+	background: #333;
+	color: #fff;
+	grid-column-start: 1;
+	grid-column-end: 13;
+}
+
+blockquote {
+	background: var(--msu-green);
+	color: #fff;
+	margin: 1rem 0;
+	padding: 1rem;
+
+    &::first-letter {
+        font-size: 3rem;
+        float: left;
+        margin-top: 0.15rem;
+    }
+}
+
+::selection {
+	background: var(--msu-green);
+	color: #fff;
+}
+::-moz-selection {
+	background: var(--msu-green);
+	color: #fff;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.ieNote {
+		display: block !important;
+	}
+}
+
+.mainContent__mainCol h2, .mainContent__mainCol h3, .mainContent__mainCol h4, .mainContent__mainCol h5, .mainContent__mainCol h6, .mainContent__sideCol h3, .mainContent__sideCol h4, .mainContent__sideCol h5, .mainContent__sideCol h6{
+	border: none;
+	padding: 0;
+}
+
+.mainColContent iframe{
+	margin: 0 !important;
+	width: 100%;
+}
