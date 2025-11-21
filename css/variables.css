@@ -1,0 +1,25 @@
+/* --- 
+
+Filename: variables.css
+
+Purpose: To define global variables that can be used throughout other stylesheets.
+
+--- */
+
+:root{
+    --max-width: 1170px;
+    --msu-green: #18453B;
+    --img-url: 'images';
+    --hero-gradient: linear-gradient(0deg,rgba(0,0,0,.3),rgba(255,255,255,0) 20%,rgba(255,255,255,0) 50%,rgba(0,0,0,.2) 80%,rgba(0,0,0,.4) 100%);
+    --heading-color: #333;
+    --heading-1-line-height: 2.75rem;
+    --heading-2-line-height: 2.25rem;
+    --heading-3-line-height: 2rem;
+    --heading-4-line-height: 1.5rem;
+    --heading-5-line-height: 1.25rem;
+    --heading-6-line-height: 1rem;
+    --base-letterspacing: 0.04rem;
+    --body-copy-color: #555;
+    --body-copy-weight: 400;
+    --msu-font: "Metropolis", sans-serif;
+}
