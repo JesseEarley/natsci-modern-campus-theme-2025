@@ -1,0 +1,32 @@
+/*----------------------
+//  College Header
+*/
+.header__collegeMasthead {
+	align-self: center;
+	grid-column: 1/8;
+	grid-row: 3/4;
+	justify-self: left;
+	padding: 10px 0;
+}
+
+.header__collegeName .header__collegeLink {
+	color: #fff;
+	font-size: 1.6rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.header__collegeName-withDeptName {
+	display: none;
+
+    & .header__collegeLink {
+        font-size: 1rem;
+    }
+}
+
+.header__departmentName .header__departmentLink {
+	color: #fff;
+	font-size: 1.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}

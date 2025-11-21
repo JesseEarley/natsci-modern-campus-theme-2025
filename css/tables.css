@@ -1,0 +1,38 @@
+/* --- 
+
+Filename: tables.css
+
+Purpose: Styles targeting HTML tables
+
+--- */
+
+/* All tables should be wrapped in a DIV with this class to make them responsive */
+.table-responsive {
+	overflow-x: auto;
+}
+
+/* This class should be applied to all tables */
+.table {
+	border: none !important;
+	color: #212529;
+	margin-bottom: 1rem;
+	width: 100% !important;
+
+    & th,
+    & td{
+        border-bottom: 1px solid #dee2e6;
+        padding: 0.5rem;
+        vertical-align: bottom;
+    }
+}
+
+/* This provides an alternating striped background for table rows */
+.table-striped tbody tr:nth-of-type(odd) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+/* This provides a hover effect when hovering over table rows */
+.table-hover tbody tr:hover {
+		color: #212529;
+		background-color: rgba(0, 0, 0, 0.075);
+	}

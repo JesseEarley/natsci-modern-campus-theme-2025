@@ -1,0 +1,360 @@
+/* --- 
+
+Filename: departmentFooter.css
+
+Purpose: Styles targeting the theme footer
+
+--- */
+
+.departmentFooter {
+	background: #062921;
+	padding: 0 0 1rem;
+
+    & .wrapper-1170MaxWidth{
+	    gap: 1rem;
+    }   
+}
+
+.header__collegeMastehead-footer {
+	grid-column: 1/-1;;
+	grid-row: unset;
+	padding-top: 2rem;
+}
+
+.header__collegeName.header__collegeName-withDeptName.header__collegeName-withDeptName-footer {
+	display: block;
+}
+
+.departmentFooter__heading::after {
+	content: "";
+	background: #00c24e;
+	display: block;
+	height: 6px;
+	width: 50px;
+	margin: 1rem 0 1.5rem;
+}
+
+.departmentFooter__link,
+.departmentFooter__discover a {
+	padding: 14px !important;
+	background: #18453b;
+	display: block;
+}
+
+    .departmentFooter a:focus {
+        outline: 2px solid #fff !important;
+		outline-offset: 4px;
+    }
+
+.departmentFooter__postFooter {
+	grid-column: 1/-1;
+
+    & a{
+        color: #fff;
+    }
+}
+
+.departmentFooter__phone a,
+.departmentFooter__email a{
+	position: relative;
+}
+
+.departmentFooter.discoverFooterFalse {
+    & .departmentFooter__navList {
+	    grid-column: 1/7;
+    }
+
+    & .departmentFooter__heading {
+		color: #fff;
+	}
+
+    & .departmentFooter__menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+    & .departmentFooter__menuItem {
+		position: relative;
+		display: inline-block;
+		width: 40%;
+		margin: .5rem;
+		margin-left: 0;
+	}
+
+    & .departmentFooter__link {
+		color: #fff;
+		text-decoration: none;
+    }
+}
+
+	.departmentFooter__link {
+		padding: 14px 0;
+	}
+
+
+.departmentFooter.discoverFooterFalse .departmentFooter__link:hover::after,
+.departmentFooter.discoverFooterFalse .departmentFooter__link:focus::after,
+.departmentFooter.discoverFooterTrue .departmentFooter__link:focus::after, 
+.departmentFooter.discoverFooterTrue .departmentFooter__link:hover::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #49cfa5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.departmentFooter.discoverFooterFalse .departmentFooter__address {
+    grid-column: 7/-1;
+
+    & address{
+         color: #49cfa5;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: bold;
+        align-self: center;
+
+        & a{
+            color: #fff;
+			text-decoration: none;
+        }
+    }
+
+    & .departmentFooter__phone,
+    & .departmentFooter__email {
+        display: block;
+        margin-bottom: 0.25rem;
+        margin-top: 1rem;
+        font-size: 1.125rem;
+        font-weight: bold;
+     }
+
+     & .department__email a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover{
+           border-bottom: 5px solid #49cfa5; 
+        }
+    }
+
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__email a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__social {
+    display: grid;
+    grid-column: 6/10;
+    grid-row: 2/3;
+    margin: 1rem 0;
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__list {
+    margin: 0;
+    padding: 0;
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__listItem {
+    display: inline-block;
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__collegeSocialIcon {
+    float: left;
+    font-size: 1.8rem;
+    padding: 3px 6px 0;
+    transition: background 0.5s;
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__collegeSocialLink {
+    border-bottom: 5px solid transparent;
+    color: #fff;
+    display: block;
+    font-size: 1.6rem;
+    overflow: auto;
+    padding: 3px;
+    text-decoration: none;
+
+    &:hover{
+	    border-color: #49cfa5;
+    }
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__promoLink {
+    display: none;
+
+    & a{
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        width: 175px;
+    }
+}
+
+.departmentFooter.discoverFooterFalse .departmentFooter__promo span {
+    font-size: 7rem;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__navList {
+    grid-column: 1/6;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__discover {
+    grid-column: 6/10;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__discover ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+	
+	
+.departmentFooter.discoverFooterTrue .departmentFooter__discover a {
+    color: #fff;
+    padding: 14px 0;
+    text-decoration: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__discover a:hover::after,
+.departmentFooter.discoverFooterTrue .departmentFooter__discover a:focus::after,
+.departmentFooter__phone a:focus::after,
+.departmentFooter__phone a:hover::after,
+.departmentFooter__email a:focus::after,
+.departmentFooter__email a:hover::after{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #49cfa5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__heading {
+    color: #fff;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__menuItem,
+.departmentFooter__discover li{
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    margin: .5rem;
+    margin-left: 0;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__address {
+    grid-column: 10/-1;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__address address {
+    color: #49cfa5;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: bold;
+    align-self: center;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__address .department__email a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__address .department__email a:hover {
+    border-bottom: 5px solid #49cfa5;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__phone,
+.departmentFooter.discoverFooterTrue .departmentFooter__email
+    {
+    display: block;
+    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__phone a,
+.departmentFooter.discoverFooterFalse .departmentFooter__phone a  {
+    color: #fff;
+    padding: 14px 0;
+    text-decoration: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__email a,
+.departmentFooter.discoverFooterFalse .departmentFooter__email a {
+    color: #fff;
+    padding: 14px 0;
+    text-decoration: none;
+}
+   
+
+.departmentFooter.discoverFooterTrue .departmentFooter__social {
+    display: grid;
+    grid-column: 7/10;
+    margin: 1rem 0;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__list {
+    margin: 0;
+    padding: 0;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__listItem {
+    display: inline-block;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__collegeSocialIcon {
+    float: left;
+    font-size: 1.8rem;
+    padding: 3px 6px 0;
+    transition: background 0.5s;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__collegeSocialLink {
+    border-bottom: 5px solid transparent;
+    color: #fff;
+    display: block;
+    font-size: 1.6rem;
+    overflow: auto;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__collegeSocialLink:hover {
+    border-color: #49cfa5;
+}
+	
+.departmentFooter.discoverFooterTrue .departmentFooter__promoLink {
+    display: none;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__promoLink a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    width: 175px;
+}
+
+.departmentFooter.discoverFooterTrue .departmentFooter__promo span {
+    font-size: 7rem;
+}

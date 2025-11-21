@@ -1,0 +1,66 @@
+/* --- 
+
+Filename: helperClasses.css
+
+Purpose: Styles that provide common, often single-purpose, styles or behaviors 
+to HTML elements.
+
+--- */
+
+.bold{
+    font-weight: 700;
+}
+
+.thin{
+    font-weight: 200;
+}
+
+.print-only {
+    display: none !important;
+}
+
+.display-desktop {
+    display: block;
+}
+
+.display-mobile{
+    display: none;
+}
+
+.video-responsive{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+
+    & iframe{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+.float-left,
+.pull-left{
+    float: left;
+    padding: 1rem;
+}
+
+.float-right,
+.pull-right{
+    float: right;
+    padding: 1rem;
+}
+
+.lead{
+    font-size: 1.3rem;
+    font-weight: 300;
+}

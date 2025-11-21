@@ -1,0 +1,407 @@
+/* --- 
+
+Filename: primaryNavigation.css
+
+Purpose: Styles targeting the primary navigation bar found in the header 
+of every page
+
+--- */
+
+/* Hiding Modern Campus Icon */
+#de {
+	display: none !important;
+}
+
+/* JavaScript Class for toggle menu */
+.is-expanded {
+	display: block !important;
+}
+
+.NAV-primarynav {
+	height: 40px;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+}
+
+.NAV-primaryNav__container {
+	background-color: var(--msu-green);
+	overflow: hidden;
+
+    & a{
+      	color: #fff;
+	    display: block;
+	    text-decoration: none;  
+    }
+}
+
+.NAV-primaryNav__menu {
+	grid-column: 1/-1;
+	margin: 0;
+	padding: 0;
+}
+
+.NAV-primaryNav__search {
+    display: none;
+	list-style: none;
+}
+
+.NAV-primaryNav__searchIcon {
+	color: #18453B;
+	font-size: 18px;
+}
+
+.mobile__msuSearchButton {
+	background: #f9f9f9;
+	border-left: 1px solid #eee;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	border-radius: 0 0.25rem 0.25rem 0;
+	cursor: pointer;
+	height: 44px;
+	position: relative;
+	vertical-align: top;
+	width: 44px;
+}
+
+#SearchBoxMobile {
+	background-color: #fff;
+	border-radius: 0.25rem 0 0 0.25rem;
+	border: none;
+	color: #495057;
+	font-size: .85rem;
+	height: 36px;
+	margin: 0 auto;
+	padding: 0.25rem 0.5rem;
+	width: 282px;
+}
+
+/* -- NatSci Nav Button Toggle -- */
+
+.NAV-primarynav__toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: none;
+	grid-column-start: 12;
+	grid-column-end: 13;
+	grid-row-start: 1;
+	justify-self: right;
+	margin-left: 20px;
+    position: relative;
+    z-index: 21;
+
+    &:focus{
+        outline: 2px dashed #fff;
+        outline-offset: 2px;
+    }
+}
+
+.NAV-primarynav__bar {
+	background-color: #fff;
+	display: block;
+	height: 5px;
+	margin: 6px 0;
+	transition: 0.4s;
+	width: 35px;
+}
+
+.NAV-primarynav__toggle.toggled .NAV-primarynav__bar-1 {
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.NAV-primarynav__toggle.toggled .NAV-primarynav__bar-2 {
+	opacity: 0;
+}
+
+.NAV-primarynav__toggle.toggled .NAV-primarynav__bar-3 {
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* -- End NatSci button Toggle -- */
+
+.NAV-primaryNav__menuItem {
+	background-color: inherit;
+	border-bottom: 6px solid transparent;
+	border-top: 6px solid transparent;
+	border-left: none;
+	border-right: none;
+	color: white;
+	float: left;
+	font-family: inherit;
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	outline: none;
+
+    &:focus,
+    &focus-within,
+    &hover{
+        border-bottom: 6px solid #00c24e;
+	    color: var(--msu-green);
+    }
+}
+
+.NAV-primaryNav__link {
+	float: left;
+	padding: 15px 12px;
+
+    &:focus{
+        outline: 2px solid white;
+        outline-offset: 4px;
+    }
+}
+
+.NAV-primaryNav__menuItemButton {
+	display: none;
+}
+
+.NAV-primaryNav__menuItemButton-rotate .NAV-primaryNav__menuItemCaret {
+	transition: 0.4s;
+	transform: rotate(90deg);
+}
+
+.NAV-primaryNav__menuItemCaret {
+	color: white;
+	display: none;
+	pointer-events: none;
+}
+
+.NAV-primaryNav__subMenu {
+	background-color: rgba(23, 56, 48, 1);
+	clear: both;
+	color: #ffffff;
+	display: none;
+	list-style: none;
+	max-width: 22rem;
+	min-width: 12rem;
+	position: absolute;
+	padding: 0;
+	top: 56px;
+	z-index: 1;
+}
+
+.NAV-primaryNav__subMenuItem a {
+	display: block;
+	float: none;
+	padding: 1rem;
+	position: relative;
+	text-align: left;
+	z-index: 2;
+}
+
+.NAV-primaryNav__subMenuLink:focus,
+.NAV-primaryNav__subMenuLink:focus-within,
+.NAV-primaryNav__subMenuLink:hover {
+	background: #18453b;
+}
+
+.NAV-primaryNav__subMenuLink:focus {
+	outline: 2px dashed white;
+	outline-offset: 2px;
+}
+
+.NAV-primaryNav__menuItem.has__dropdown.open .NAV-primaryNav__subMenu{
+	display: block;
+}
+
+@media (hover: hover) {
+
+	.NAV-primaryNav__menuItem:focus-within .NAV-primaryNav__subMenu,
+	.NAV-primaryNav__menuItem:hover .NAV-primaryNav__subMenu {
+		display: block;
+	}
+}
+
+@media (hover: none) {
+
+	.NAV-primaryNav__menuItem:focus-within .NAV-primaryNav__subMenu,
+	.NAV-primaryNav__menuItem:hover .NAV-primaryNav__subMenu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1157px) {
+
+	.header__msuSearchTool {
+		display: none;
+	}
+
+	.NAV-primarynav .wrapper-1170MaxWidth {
+		clear:both;
+		padding: 0;
+	}
+
+	.NAV-navWrap {
+		background-color: #18453b;
+		height: 42px;
+		position: relative;
+		width: 100%;
+	}
+
+	#NAV-topNavList {
+		position: absolute;
+		right: 0;
+		width: 390px;
+	}
+
+	.NAV-primaryNav__container .NAV-icon {
+		display: block;
+		float: right;
+		margin-right:1.5rem;
+	}
+
+	.NAV-primaryNav__menu {
+		display: none;
+	}
+
+	.NAV-primaryNav__menu-responsive {
+		display: block;
+		position: relative;
+		text-align: left;
+		width: 100%;
+	}
+
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__menuItem {
+		display: block;
+		text-align: left;
+		width: 100%;
+	}
+
+	.NAV-primaryNav__search {
+		display: block;
+	}
+
+	.NAV-searchContainer {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0;
+	}
+
+	.NAV-primaryNav__menuItem {
+		border-bottom: 1px solid #103129;
+		border-top: 0;
+		padding: .5rem 0rem;
+	}
+
+	.NAV-primaryNav__menuItem:focus-within .NAV-primaryNav__subMenu,
+	.NAV-primaryNav__menuItem .NAV-primaryNav__subMenu {
+		display: none;
+	}
+
+	.NAV-primaryNav__menuItem:focus-within .NAV-primaryNav__subMenu,
+	.NAV-primaryNav__menuItem:hover .NAV-primaryNav__subMenu {
+		display: none;
+	}
+
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__menuItem,
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__menuItem:focus,
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__menuItem:focus-within,
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__menuItem:hover {
+		border-bottom: 1px solid #103129;
+	}
+
+	.NAV-primaryNav__menuItemButton {
+		background-color: #173830;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		display: block;
+		float: right;
+		height: 44px;
+		margin-right: 20px;
+		margin-top: -44px;
+		width: 60px;
+	}
+
+	.NAV-primaryNav__menuItemCaret {
+		color: white;
+		display: inline-block;
+	}
+
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__subMenu {
+		max-width: 100%;
+		position: relative;
+		padding-top: 10px;
+		top: 10px;
+	}
+
+	.NAV-primaryNav__link {
+		display: block !important;
+		float: none;
+		margin-left: 20px;
+		padding: 14px 14px;
+		text-align: left;
+	}
+
+	.NAV-primaryNav__subMenuItem {
+		width: 100%;
+	}
+
+	.NAV-primaryNav__subMenuItem a {
+		padding: 1rem 3rem;
+	}
+
+	.NAV-primaryNav__menu-responsive .NAV-primaryNav__subMenu .NAV-primaryNav__subMenuItem:last-child {
+		padding-bottom: 10px;
+	}
+
+	#AccessibilityToolsButton-Mobile {
+		top: 7rem !important;
+		z-index: 100 !important;
+	}
+	.header {
+		background: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%) !important;
+	}
+	.background-gradient {
+		background: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%) !important;
+		width: 100% !important;
+	}
+	.header__msuMasthead {
+    		align-self: normal !important;
+    		justify-self: left !important;
+ 	 }
+	.header__collegeMasthead {
+		justify-self: left !important;
+		text-align: left !important;
+		padding-top: 0;
+	}
+	.header__collegeName .header__collegeLink {
+		font-size: 1.05rem !important;
+	}
+	  .NAV-navWrap {
+    		background: none !important;
+  	}
+	.NAV-primarynav {
+  		position: absolute !important;
+  		top: 0;
+	}
+	#NAV-topNavList {
+		background: none;
+	}
+	#NAV-topNavList:has(.toggled) {
+  		background-color: #18453b;
+	}
+	.NAV-primaryNav__container .NAV-icon {
+		margin-right: 1rem;
+		margin-top: 2.1rem;
+		top: -5px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#NAV-topNavList {
+		width: 100%;
+	}
+
+	.header__msuSearchForm {
+		margin: 0 auto;
+		position: relative;
+	}
+
+	#SearchBoxMobile {
+		margin: 0 auto;
+		width: 240px;
+	}
+}

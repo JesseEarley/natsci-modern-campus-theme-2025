@@ -1,0 +1,38 @@
+/* --- 
+
+Filename: wells.css
+
+Purpose:  Styles for wells. Wells are UI element that visually stand out from the 
+rest of the page to highlight content.
+
+--- */
+
+/* Standard well with gray background */
+.well{
+    background: #EEE;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+/* Green background variant, must include both .well and .well-green classes to the container 
+This will also change the text within the well to white to make it accessible and readable. */
+.well-green{
+    background: var(--msu-green) !important;
+    color: #FFF;
+
+    & a{
+        color: #FFF !important;
+        text-decoration: underline !important;
+
+        &:focus{
+            outline: 2px solid #FFF !important;
+        }
+    }
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6{
+        color: #fff;
+    }
+}

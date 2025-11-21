@@ -1,0 +1,236 @@
+/* --- 
+
+Filename: accessibilityTools.css
+
+Purpose: Styles targeting the Accessibility Toolbar that is baked into the NatSci template
+
+--- */
+
+/* These variables are separated from the overall theme variables as they are specific
+to the accessibility toolbar */
+:root {
+    --accessibility-tools-wrapper: 100%; /*This variable will set the width of the accessibility toolbar*/
+    --accessibility-tools-highlightColor: #ff0; /*This variable will set the highlight color for links*/
+    --accessibility-tools-textSize: 22.4px ; /*This variable will set the base text size once this option is chosen in the tools*/
+    --accessibility-tools-letterSpacing: .2rem; /*This variable will set the spacing between characters*/
+    --accessibility-tools-readabilityBarTop: #000; /*This variable will set the top border color for the readability bar*/
+    --accessibility-tools-readabilityBarBottom: #000; /*This variable will set the bottom border color for the readability bar*/
+}
+#AccessibilityToolsButton-Mobile{
+    background: rgba(24,69,59,.7);
+    border: none;
+    border-radius: 10px 0 0 10px;
+    color: #FFF;
+    font-size: 2rem;
+    padding: .5rem;
+    position: fixed;
+    right: 0;
+    top: 56px;
+    z-index: 99999;
+    text-decoration: none;
+
+    & svg{
+        fill: #FFF;
+        height: 3rem;
+        position: relative;
+        top: .3rem;
+        width: 3rem;
+    }
+}
+
+#AccessibilityToolsButton {
+    border-right: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    left: -10000px;
+    overflow: hidden;
+    padding: 0.5rem;
+    position: absolute;
+    top: auto;
+    z-index: 100;
+
+    &:focus{
+        background-color: #444;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+}
+
+#AccessibilityToolsWrapper {
+    /*border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;*/
+    margin: -9px auto 0;
+    position: relative;
+    width: var(--accessibility-tools-wrapper);
+    z-index: 9999;
+}
+#AccessibilityTools {
+    display: none;
+
+    &.is-visible{
+        display: block;
+    }
+}
+
+.accessibilityTools {
+    background: #FFF;
+    font-family: var(--msu-font);
+    text-align: center;
+
+    & h2{
+        font-size: 2.1rem;
+        padding: 1rem;
+        margin: 0; 
+    }
+
+    & h3{
+        font-size: 1rem;
+        margin: .5rem 0;
+    }
+
+    & .accessibilityToolsOptionsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+
+    & svg{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    & .accessibilityToolsOption{
+        margin: 1rem;
+    }
+
+    & .accessibilityLabel {
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+    }
+
+    & .switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+    }
+
+    & .slider {
+        background-color: #ccc;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        transition: 0.4s;
+        top: 0;
+        -webkit-transition: 0.4s;
+
+        &:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: 0.4s;
+            width: 26px;
+            -webkit-transition: 0.4s;
+        }
+    }
+
+    & input:checked + .slider {
+        background-color: #2196f3;
+    }
+
+    & .accessibilityTools input:focus + .slider {
+        box-shadow: 0 0 8px #007bff;
+    }
+
+    & .accessibilityTools input:checked + .slider:before {
+        transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        -webkit-transform: translateX(26px);
+    }
+
+    & #AccessibilityToolsButtonClose {
+        align-items: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        display: flex;
+        font-size: 1rem;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+.accessibilityTools-grayscale {
+    filter: grayscale(100%) !important;
+    -webkit-filter: grayscale(100%) !important;
+}
+.accessibilityTools-highlightLinks a,
+.accessibilityTools-highlightLinks a * {
+    background-color: #000 !important;
+    color: var(--accessibility-tools-highlightColor) !important;
+    text-decoration: underline !important;
+}
+.accessibilityTools-contrast {
+    background: #000 !important;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+.accessibilityTools-textSize {
+    font-size: var(--accessibility-tools-textSize);
+}
+.accessibilityTools-letterSpacing {
+    letter-spacing: var(--accessibility-tools-letterSpacing);
+}
+.accessibilityTools-dyslexiaFriendly{
+    font-family: Comic Sans MS, "Comic Sans", "Comic Sans MS", "Comic Sans W01 Regular", sans-serif !important;
+}
+.accessibilityTools-cursorSize{
+    cursor: url("images/shared/pointer.png"), auto;
+}
+.accessibilityTools-cursorSize a:hover,
+.accessibilityTools-cursorSize button:hover,
+.accessibilityTools-cursorSize input:hover,
+.accessibilityTools-cursorSize .slider:hover{
+    cursor: url("images/shared/hand.png"), auto !important;
+}
+#Skip a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    overflow: hidden;
+    padding: .3em;
+    color: #fff;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    z-index: 100
+}
+
+#Skip a:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #444
+}
+
+#ReadabilityBar{
+    border-bottom: 5px solid var(--accessibility-tools-readabilityBarBottom);
+    border-top: 5px solid var(--accessibility-tools-readabilityBarTop);
+    box-shadow: 0 0 0 200vw rgba(0,0,0,0.1);
+    height: 9.6rem;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}

@@ -1,0 +1,32 @@
+/* --- 
+
+Filename: buttons.css
+
+Purpose: Styles that target buttons. 
+
+--- */
+
+/* These styles provide a white button with green text that have a hover effect that 
+wipes from left to right and turns the button green with white text */
+.btn-readMore {
+	background: linear-gradient(to right, #18453b 50%, #fff 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	text-decoration: none;
+	color: var(--msu-green);
+	border: 2px solid #18453b;
+	width: 150px;
+	padding: 0.8rem;
+	justify-self: center;
+	font-weight: 700;
+	margin: 0 auto;
+	transition: all 0.4s;
+	text-align: center;
+	text-transform: uppercase;
+
+    &:hover,
+    &:focus{
+        background-position: left bottom;
+        color: #fff !important;
+    }
+}

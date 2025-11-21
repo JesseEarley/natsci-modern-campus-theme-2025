@@ -1,0 +1,19 @@
+/* --- 
+
+Filename: documentLayout.css
+
+Purpose: Styles that target overall page layout. 
+
+--- */
+
+/* White the class is named 'wrapper-1170MaxWidth', the actual width is now controlled
+by a variable found in the variables.css file. This allows us to more easily change
+overall width on the fly. Additionally, the content area is based on a 12-column
+grid layout, evenly spaced at one fraction. */
+.wrapper-1170MaxWidth{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}

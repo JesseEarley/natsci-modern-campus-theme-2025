@@ -1,0 +1,37 @@
+/*----------------------
+//  NatSci Homepage
+*/
+
+/*NatSci Stats*/
+.natsciStats {
+	background: linear-gradient(rgba(200, 200, 0, 0.35), rgba(0, 0, 0, 0.35)),
+		url(images/statsBG.jpg) no-repeat 50% 0;
+	background-attachment: fixed;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	min-height: 500px;
+	padding: 1rem 0;
+	text-align: center;
+
+    & a:focus{
+		outline: 2px dashed #fff;
+		outline-offset: 2px;
+    }
+}
+
+/*iOS browser fix for .natsciStats background*/
+@supports ( -webkit-touch-callout : none) {
+	.natsciStats {
+		background-attachment:scroll
+	}
+}	
+
+@supports ( -webkit-touch-callout : none) { /*needed to fix an iOS bug for fixed backgrounds */
+	.natsciHome__section5 {
+	background-attachment:scroll !important
+	}
+} 

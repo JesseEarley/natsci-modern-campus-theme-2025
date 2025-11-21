@@ -1,0 +1,61 @@
+/* --- 
+
+Filename: alerts.css
+
+Purpose:  Styles for alerts. These are separated out from components because 
+they are also used for non-component alerts
+
+--- */
+
+.alert {
+	background: #fff !important;
+	border-radius: 0;
+	box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14),
+		0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px -1px rgba(0, 0, 0, 0.2);
+	color: #000;
+	margin: 1rem 0;
+	overflow: hidden;
+	padding: 1rem 1rem 2rem;
+	position: relative;
+	z-index: 0;
+
+    & a{
+        color: var(--msu-green);
+
+        &:focus{
+            outline: 2px solid var(--msu-green);
+			outline-offset: 4px;  
+        }
+    }
+}
+    
+.alert-info { /* Should be used for informational notifications */
+	border-top: 10px solid #03a9f4;
+}
+
+.alert-success { /* Should be used for success notifications */
+	border-top: 10px solid #4caf50;
+}
+
+.alert-warning { /* Should be used for warning notifications */
+	border-top: 10px solid #ff9800;
+}
+
+.alert-danger { /* Should be used ONLY for notifications where it is important to denote dangerous situations */
+	border-top: 10px solid #f44336;
+}
+
+.alert-page {
+	display: none;
+	margin: 0;
+	z-index: 1981;
+}
+
+.alert__closeButton {
+	background: transparent;
+	border: none;
+	font-size: 2rem;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
