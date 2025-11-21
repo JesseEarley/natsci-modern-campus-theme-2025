@@ -8,4 +8,24 @@ Purpose: Pulls in all of the individual css files via @import to combine them in
 
 @import "metropolisFont.css"; /* MSU approved font */
 @import "variables.css"; /* Variables used throughout other stylesheets */
-@import "htmlElements.css"; /* styles targeting HTML elements directly */
+@import "htmlElements.css"; /* Styles targeting HTML elements directly */
+@import "screenReader.css"; /* Styles targeting screen readers */
+@import "accessibilityTools.css"; /* Styles targeting the Accessibility Toolbar that is baked into the NatSci template */
+@import "buttons.css"; /* Styles targeting buttons that are generally used for 'Read More' buttons */
+@import "documentLayout.css"; /* Styles targeting overall page layout */
+@import "helperClasses.css"; /* Styles that provide common, often single-purpose, styles or behaviors to HTML elements */
+@import "alerts.css"; /* Styles targeting alerts. These are separated out from components because they are also used for non-component alerts */
+@import "tables.css"; /* Styles targeting HTML tables */
+@import "wells.css"; /* Styles targeting wells */
+@import "msuHeader.css"; /* Styles targeting the required MSU header */
+@import "collegeHeader.css"; /* Styles targeting the college masthead */
+@import "primaryNavigation.css"; /* Styles targeting the primary navigation bar found in the header of every page */
+@import "breadcrumbNavigation.css"; /* Styles targeting the breadcrumb navigation found on every page */
+@import "homepageHero.css"; /* Styles targeting the hero area of website homepages */
+@import "natsciHomepage.css"; /* Styles targeting the college homepage */
+@import "departmentHomepage.css"; /* Styles targeting department homepages */
+@import "departmentFooter.css"; /* Styles targeting the theme footer */
+
+
+
+
