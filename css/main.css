@@ -7,4 +7,5 @@ Purpose: Pulls in all of the individual css files via @import to combine them in
 --- */
 
 @import "metropolisFont.css"; /* MSU approved font */
-@import "variables.css"; /* Variables used throughout other stylesheets
+@import "variables.css"; /* Variables used throughout other stylesheets */
+@import "htmlElements.css"; /* styles targeting HTML elements directly */
