@@ -1,0 +1,183 @@
+/* --- 
+
+Filename: secondaryPage.css
+
+Purpose: Styles targeting secondary pages within the theme. 
+
+--- */
+
+.heroBanner {
+	background: url(../../images/heroNewsItem.jpg) no-repeat;
+	background-position: center;
+	height: 260px;
+	background-size: cover !important;
+	position: relative;
+}
+    &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hero-gradient);
+            z-index: 1;
+        }
+
+.heroBanner-news,
+.heroBanner-sectionFront {
+	height: 550px;
+}
+
+.heroBanner-sectionFront,
+.heroBanner-secondaryPage {
+	background: url(../../images/buildingWide.jpg) no-repeat;
+}
+
+.mainContent {
+	background: #fff;
+	color: var(--body-copy-color);
+	font-weight: var(--body-copy-weight);
+	line-height: 1.8rem;
+	margin-top: 1rem;
+	padding-bottom: 1.5rem;
+	position: relative;
+	z-index: 10;
+
+    & a {
+		color: var(--msu-green);
+		font-weight: bold;
+	}
+
+    & a:focus {
+        outline: 2px solid var(--msu-green);
+		outline-offset: 4px;
+    }
+
+	& .wrapper-1170MaxWidth {
+		column-gap: 1rem;
+	}
+
+	& img {
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.mainContent__mainCol {
+	grid-column: 1/9;
+	padding: 0 1rem 0 0;
+	width: 100%;
+
+    & iframe {
+		margin: 1rem;
+	}
+
+	& .g-recaptcha-container iframe{
+		margin: 0;
+	}
+}
+
+.mainContent__sideCol-false {
+	grid-column: 1/-1;
+	padding: 0;
+}
+
+.mainContent__pageTitle {
+	line-height: 2.5rem;
+}
+
+.newsArticle .mainContent__metaData {
+	background: var(--msu-green);
+	color: #fff;
+	list-style: none;
+	margin: 0;
+	padding: 1rem;
+
+    & .mainContent__metaData .mura-tags a{
+        background: #FFF;
+        border-radius: 10px;
+        display: inline-block;
+        font-weight: 100 !important;
+        margin: 5px 0;
+        padding: 5px;
+        text-decoration: none;
+    }
+}
+
+.sectionFront .mainContent__metaData,
+.secondaryPage .mainContent__metaData {
+	display: none;
+}
+
+.mainContent__mainCol h1::after,
+.mainContent__sideCol h2::after{
+	content: "";
+	display: block;
+	width: 50px;
+	background: #00c24e;
+	height: 6px;
+	margin: 1rem 0 1.5rem;
+}
+
+.mainContent__sideCol {
+	background: #fff;
+	grid-column: 9/-1;
+	margin-top: -60px;
+}
+
+.mainContent__displayObjectContainer {
+	border-left: 2px solid var(--msu-green);
+	border-top: 2px solid var(--msu-green);
+	overflow: auto;
+	padding: 1rem;
+}
+
+
+.mainContent__sideNavTitle {
+	margin: 0;
+}
+
+.mainContent__sideNav {
+	background: #fff;
+
+    & ul {
+        list-style: none;
+        padding: 0;
+   
+        & li {
+	        border-bottom: 1px solid #eee;
+
+            & a {
+                color: #18453b;
+                display: block;
+                font-weight: 500;
+                padding: 0.2rem 0.8rem;
+                text-decoration: none;
+                transition: all 0.2s;
+
+                &:hover,
+                &:focus{
+                    background: var(--msu-green);
+                    color: #fff;
+                }
+            }
+            & ul{
+	            padding: 0.2rem 1.2rem;
+
+                & li{
+	                font-size: 0.9rem;
+
+                    &:last-child{
+	                    border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mainContent__sideNav .currentPage{
+	background-color: var(--msu-green);
+	color: #FFF !important;
+}
