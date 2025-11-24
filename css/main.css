@@ -25,7 +25,9 @@ Purpose: Pulls in all of the individual css files via @import to combine them in
 @import "natsciHomepage.css"; /* Styles targeting the college homepage */
 @import "departmentHomepage.css"; /* Styles targeting department homepages */
 @import "departmentFooter.css"; /* Styles targeting the theme footer */
-
-
-
-
+@import "msuFooter.css"; /* Styles targeting the required MSU footer */ /*for sure here down */
+@import "secondaryPage.css"; /* Styles targeting secondary pages within the theme */
+@import "news.css"; /* Styles targeting news pages within the theme */
+@import "forms.css"; /* Styles targeting forms and form elements */
+@import "printStyles.css"; /* Styles for printing a webpage */
+@import "mediaQueries.css"; /* Styles for responsive design */
